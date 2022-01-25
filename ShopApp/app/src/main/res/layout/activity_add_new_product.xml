@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddNewProduct">
+
+    <androidx.appcompat.widget.Toolbar
+
+        android:id="@+id/toolbar_add_new_product"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        app:title="@string/add_new_product_title"
+        app:titleTextColor="#000000" />
+
+    <EditText
+
+        android:id="@+id/nombre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar_add_new_product"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:drawablePadding="10dp"
+        android:hint="@string/nombre_hint"
+        android:inputType="none"
+        android:paddingBottom="10dp"
+        android:singleLine="true"
+        android:textSize="20sp"
+        tools:ignore="TouchTargetSizeCheck">
+
+
+    </EditText>
+
+    <EditText
+
+        android:id="@+id/descripcion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/nombre"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginRight="20dp"
+        android:drawablePadding="10dp"
+        android:hint="@string/descripcion_hint"
+        android:inputType="none|textEmailAddress"
+        android:paddingBottom="10dp"
+        android:textSize="14sp"
+        tools:ignore="TouchTargetSizeCheck">
+
+    </EditText>
+
+    <EditText
+
+        android:id="@+id/categoria"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/descripcion"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:backgroundTint="@color/colorDefault"
+        android:drawablePadding="10dp"
+        android:enabled="false"
+        android:hint="@string/categoria_hint"
+        android:inputType="none"
+        android:paddingBottom="10dp"
+        android:textSize="14sp">
+
+    </EditText>
+
+    <EditText
+
+        android:id="@+id/cantidad_insertada"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/categoria"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:drawablePadding="10dp"
+        android:hint="@string/cantidad_hint"
+        android:inputType="number"
+        android:paddingBottom="10dp"
+        android:textSize="12sp" />
+
+    <EditText
+
+        android:id="@+id/stock_minimo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/categoria"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:layout_toEndOf="@id/cantidad_insertada"
+        android:drawablePadding="10dp"
+        android:hint="@string/stock_min_hint"
+        android:inputType="number"
+        android:paddingBottom="10dp"
+        android:textSize="12sp"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <EditText
+
+        android:id="@+id/descuento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/categoria"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:layout_toEndOf="@+id/stock_minimo"
+        android:drawablePadding="10dp"
+        android:hint="@string/descuento_hint"
+        android:inputType="number"
+        android:paddingBottom="10dp"
+        android:textSize="12sp"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <EditText
+
+        android:id="@+id/precio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/categoria"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:layout_toEndOf="@+id/descuento"
+        android:drawablePadding="10dp"
+        android:hint="@string/precio_hint"
+        android:inputType="number"
+        android:paddingBottom="10dp"
+        android:textSize="12sp" />
+
+    <CheckBox
+        android:id="@+id/promocion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cantidad_insertada"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/hay_promocion_hint" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/promocion"
+        android:layout_marginTop="50dp"
+        android:orientation="horizontal">
+
+        <Button
+
+            android:id="@+id/accept"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/forgot_password"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="20dp"
+            android:layout_weight="1"
+            android:background="#00008b"
+            android:text="@string/boton_aceptar"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="20dp" />
+
+        <Button
+
+            android:id="@+id/cancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/forgot_password"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="20dp"
+            android:layout_toEndOf="@+id/accept"
+            android:layout_weight="1"
+            android:background="#00008b"
+            android:enabled="true"
+            android:text="@string/boton_cancelar"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="20dp" />
+    </LinearLayout>
+
+</RelativeLayout>

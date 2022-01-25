@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">ShopApp</string>
+    <string name="login_text">Log In</string>
+    <string name="forgot_pass_text">Forgot Password</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="remember_pass_text">Remember Password</string>
+    <string name="request_access_text">Request Access</string>
+
+    <!-- NEW PRODUCT -->
+    <string name="nombre_hint">Name</string>
+    <string name="descripcion_hint">Description</string>
+    <string name="categoria_hint">Category</string>
+    <string name="cantidad_hint">Quantity</string>
+    <string name="descuento_hint">Discount</string>
+    <string name="stock_min_hint">Stock Min</string>
+    <string name="precio_hint">Price</string>
+    <string name="hay_promocion_hint">offer?</string>
+
+    <!-- TITLES -->
+    <string name="add_new_product_title">New Product</string>
+
+
+    <!-- BUTTON -->
+    <string name="boton_aceptar">Aceptar</string>
+    <string name="boton_cancelar">Cancelar</string>
+</resources>

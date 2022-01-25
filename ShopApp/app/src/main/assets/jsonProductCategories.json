@@ -1,0 +1,8 @@
+{"categories" : [
+    {"tipo": "Lacteos", "isEnabled": false, "Imagen":  "lacteos"},
+    {"tipo": "Frutas", "isEnabled": false, "Imagen":  "frutas"},
+    {"tipo": "Carnes", "isEnabled": false, "Imagen":  "carnes"},
+    {"tipo": "Pescados", "isEnabled": false, "Imagen":  "pescados"},
+    {"tipo": "Verduras", "isEnabled": false, "Imagen":  "verduras"}
+]
+}

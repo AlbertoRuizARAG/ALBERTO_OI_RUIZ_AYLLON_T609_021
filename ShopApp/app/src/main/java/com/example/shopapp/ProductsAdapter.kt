@@ -27,6 +27,7 @@ class ProductsAdapter (private val productsList: ArrayList<ProductsItem>) : Recy
         val textView1: TextView = itemView.findViewById(R.id.tvTitle)
         val descripcion: TextView = itemView.findViewById(R.id.ivDescripcion)
         val stockDisponible: TextView = itemView.findViewById(R.id.ivCantidadDisponible)
+        val precio: TextView = itemView.findViewById(R.id.ivPrecio)
 
         init {
 
@@ -87,7 +88,7 @@ class ProductsAdapter (private val productsList: ArrayList<ProductsItem>) : Recy
         holder.textView1.text = currentItem.nombre
         holder.descripcion.text = currentItem.descProducto
         holder.stockDisponible.text = "Stock: " + currentItem.cantidadActual.toString()
-
+        holder.precio.text = currentItem.price.toString() + "€"
 
     }
 

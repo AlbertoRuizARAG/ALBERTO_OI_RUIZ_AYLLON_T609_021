@@ -1,5 +1,6 @@
 package com.example.shopapp
 
+import android.content.DialogInterface
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -30,6 +31,7 @@ class MainShop : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
+        showInfoNotes()
         createUI()
 
     }
@@ -74,6 +76,35 @@ class MainShop : AppCompatActivity() {
 
     }
 
+    private fun showInfoNotes() {
+        val dialogBuilder = AlertDialog.Builder(this)
+
+        // set message of alert dialog
+        dialogBuilder.setMessage("1. Conexíon a base de datos FIRESBASE TIEMPO REAL.\r\n" +
+                "2.En el botón +, podemos crear nuevos productos que se almacenarán en la categoría " +
+                "seleccionada.\r\n" +
+                "3. Almacenaje de productos en FIREBASE\r\n" +
+                "4. Futuras implementaciones:\n" +
+                "   - Control de stock.\n" +
+                "   - Avisos falta de producto.\n" +
+                "   - Aplicación automática de ofertas.\n")
+            // if the dialog is cancelable
+            .setCancelable(false)
+            // positive button text and action
+            .setPositiveButton(getString(R.string.boton_aceptar), DialogInterface.OnClickListener {
+                    dialog, id ->
+
+            })
+
+
+        // create dialog box
+        val alert = dialogBuilder.create()
+        // set title for alert dialog box
+        alert.setTitle("NEWS")
+        // show alert dialog
+        alert.show()
+
+    }
     private fun createUI() {
         //cargar el fichero JSON con las categorias
         val jsonCategoryString = jsonParserDataToString(this, JSON_CATEGORIES_FILENAME)

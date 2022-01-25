@@ -5,7 +5,7 @@
     <string name="email">Email</string>
     <string name="password">Password</string>
     <string name="remember_pass_text">Remember Password</string>
-    <string name="request_access_text">Request Access</string>
+    <string name="request_access_text">Sign In With Google</string>
 
     <!-- NEW PRODUCT -->
     <string name="nombre_hint">Name</string>

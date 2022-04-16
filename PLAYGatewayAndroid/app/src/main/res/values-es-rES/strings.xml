@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">PLAYGatewayAndroid</string>
+    <string name="login_text">Acceso</string>
+    <string name="forgot_pass_text">Olvidó contraseña</string>
+    <string name="email">"Correo "</string>
+    <string name="password">Contraseña</string>
+    <string name="tenant">Tenant</string>
+    <string name="remember_pass_text">Recordar Contraseña</string>
+    <string name="request_access_text">Solicitar Acceso</string>
+    <string name="acceso_app">Acceder</string>
+    <string name="btn_aceptar">Aceptar</string>
+    <string name="btn_cancelar">Cancelar</string>
+    <string name="proceso_fail">Proceso Incorrecto</string>
+    <string name="enable_developer_mode">Habilitar Modo Desarrollador?</string>
+    <string name="advertencia">Advertencia</string>
+    <string name="proceso_correcto">Proceso Correcto</string>
+    <string name="campos_vacios">Campos Vacios</string>
+    <string name="menu_home">Info</string>
+    <string name="menu_sistemas_control">Sistemas de Control</string>
+    <string name="menu_gestion_sims">Gestión Sims</string>
+    <string name="go_back_to_auth_menu">Cambio de Usuario</string>
+    <string name="cora_manager_cmr">CORA MANAGER CMR</string>
+    <string name="cora_manager_plc">CORA MANAGER PLC</string>
+    <string name="cora_manager_iot">CORA MANAGER IOT</string>
+    <string name="title_activity_main_menu_hamburguer">MainMenuHamburguer</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Ajustes</string>
+</resources>

@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">CMR</string>
+    <string name="title_activity_cmr_viewer">CmrViewerActivity</string>
+</resources>

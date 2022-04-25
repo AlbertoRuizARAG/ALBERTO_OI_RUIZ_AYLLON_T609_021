@@ -30,7 +30,7 @@ class UuidConstants {
         //PROGRAMMING.CHARACTERISTICS
         val BLE_CHARACTERISTIC_SequenceSettings: UUID = UUID.fromString("12345678-a3a4-4f31-8f8a-60d205cd5e1f")
         val BLE_CHARACTERISTIC_StartProgramming: UUID = UUID.fromString("12345678-e4b9-496a-b425-3ff84a3d4228")
-        
+
 
         //CURRENT TIME-CHARACTERISTICS
         val BLE_CHARACTERISTIC_CurrentTime: UUID = UUID.fromString(convert16to128UUID("2A2B"))

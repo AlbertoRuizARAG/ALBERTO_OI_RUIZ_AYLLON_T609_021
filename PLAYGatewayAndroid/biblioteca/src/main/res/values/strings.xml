@@ -2,7 +2,7 @@
     <string name="app_name">Biblioteca</string>
 
     <!-- KEYS -->
-    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyAgcN3MZIyxb75bxK_ss0xLLAxFGBuzdnQ</string>
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyA49sDmHs1kk-fA1ugFnu6e25CzGWK2KNM</string>
 
     <string name="empty_generic_text" translatable="false">"Empty Generic Text"</string>
 

@@ -216,8 +216,9 @@ class CmrBleScannerNewCora : AppCompatActivity() {
 
     private fun verifyBLEApadterPermissions() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
-            if (checkSelfPermission(Manifest.permission.BLUETOOTH_CONNECT) == PackageManager.PERMISSION_DENIED ||
-                checkSelfPermission(Manifest.permission.BLUETOOTH_SCAN) == PackageManager.PERMISSION_DENIED
+            if (checkSelfPermission(Manifest.permission.BLUETOOTH_SCAN) == PackageManager.PERMISSION_DENIED ||
+                checkSelfPermission(Manifest.permission.BLUETOOTH_ADVERTISE) == PackageManager.PERMISSION_DENIED ||
+                checkSelfPermission(Manifest.permission.BLUETOOTH_CONNECT) == PackageManager.PERMISSION_DENIED
             ) {
                 val permissions = arrayOf(
                     Manifest.permission.BLUETOOTH_SCAN,
@@ -246,18 +247,31 @@ class CmrBleScannerNewCora : AppCompatActivity() {
         }
     }
     private fun verifyBLEPermissions() {
-         if (checkSelfPermission(Manifest.permission.BLUETOOTH) == PackageManager.PERMISSION_DENIED  ||
-             checkSelfPermission(Manifest.permission.BLUETOOTH_ADMIN) == PackageManager.PERMISSION_DENIED
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+            if (checkSelfPermission(Manifest.permission.BLUETOOTH_SCAN) == PackageManager.PERMISSION_DENIED ||
+                checkSelfPermission(Manifest.permission.BLUETOOTH_ADVERTISE) == PackageManager.PERMISSION_DENIED ||
+                checkSelfPermission(Manifest.permission.BLUETOOTH_CONNECT) == PackageManager.PERMISSION_DENIED
             ) {
-            val permissions = arrayOf(
-                Manifest.permission.BLUETOOTH_ADMIN,
-                Manifest.permission.BLUETOOTH)
-            requestPermissions(permissions, PERMISSION_BLE)
-        } else{
-            startBleScan()
+                val permissions = arrayOf(
+                    Manifest.permission.BLUETOOTH_ADVERTISE,
+                    Manifest.permission.BLUETOOTH_SCAN,
+                    Manifest.permission.BLUETOOTH_CONNECT
+                )
+                requestPermissions(permissions, PERMISSION_BLE)
+            } else {
+                startBleScan()
+            }
+        } else {
+            if (checkSelfPermission(Manifest.permission.BLUETOOTH) == PackageManager.PERMISSION_DENIED) {
+                val permissions = arrayOf(Manifest.permission.BLUETOOTH)
+                requestPermissions(permissions, PERMISSION_BLE)
+            } else {
+                startBleScan()
+            }
         }
 
     }
+   
     //Control de Permisos
     override fun onRequestPermissionsResult(
         requestCode: Int,
